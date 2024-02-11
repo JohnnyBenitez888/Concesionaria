@@ -1,5 +1,7 @@
 package com.todocode.ap.concesionaria;
 
+import com.todocode.ap.concesionaria.igu.Principal;
+
 /**
  *
  * @author Johnny
@@ -7,6 +9,10 @@ package com.todocode.ap.concesionaria;
 public class Concesionaria {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        Principal pri = new Principal();
+        pri.setVisible(true);
+        pri.setLocationRelativeTo(null);
+        
     }
 }
