@@ -144,6 +144,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Consulta, Edici&#xf3;n y Baja"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBajasActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnSalir">
           <Properties>

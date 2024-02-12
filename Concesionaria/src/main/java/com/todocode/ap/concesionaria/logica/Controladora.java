@@ -1,6 +1,7 @@
 package com.todocode.ap.concesionaria.logica;
 
 import com.todocode.ap.concesionaria.persistencia.ControladoraPersistencia;
+import java.util.List;
 
 public class Controladora {
 
@@ -18,6 +19,10 @@ public class Controladora {
 
         persis.crearAuto(auto);
 
+    }
+
+    public List<Automovil> traerAutos() {
+        return persis.traerAutos();
     }
 
 }

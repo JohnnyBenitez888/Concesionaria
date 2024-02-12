@@ -8,6 +8,7 @@ public class Principal extends javax.swing.JFrame {
 
     public Principal() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
@@ -49,6 +50,11 @@ public class Principal extends javax.swing.JFrame {
         btnBajas.setForeground(new java.awt.Color(255, 255, 255));
         btnBajas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/consulta(40x40).png"))); // NOI18N
         btnBajas.setText("Consulta, Edición y Baja");
+        btnBajas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBajasActionPerformed(evt);
+            }
+        });
 
         btnSalir.setBackground(new java.awt.Color(51, 51, 51));
         btnSalir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -124,6 +130,14 @@ public class Principal extends javax.swing.JFrame {
         alta.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnAltasActionPerformed
+
+    private void btnBajasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBajasActionPerformed
+        // CONSULTA Y EDICION
+        VerAutos ver = new VerAutos();
+        ver.setVisible(true);
+        ver.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnBajasActionPerformed
 
    
 
