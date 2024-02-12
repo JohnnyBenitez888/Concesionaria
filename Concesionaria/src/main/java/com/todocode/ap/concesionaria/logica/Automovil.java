@@ -19,12 +19,12 @@ public class Automovil implements Serializable {
     private String motor;
     private String color;
     private String patente;
-    private int cantPuertas;
+    private String cantPuertas;
 
     public Automovil() {
     }
 
-    public Automovil(String modelo, String marca, String motor, String color, String patente, int cantPuertas) {
+    public Automovil(String modelo, String marca, String motor, String color, String patente, String cantPuertas) {
         this.modelo = modelo;
         this.marca = marca;
         this.motor = motor;
@@ -33,7 +33,7 @@ public class Automovil implements Serializable {
         this.cantPuertas = cantPuertas;
     }
 
-    public Automovil(int id, String modelo, String marca, String motor, String color, String patente, int cantPuertas) {
+    public Automovil(int id, String modelo, String marca, String motor, String color, String patente, String cantPuertas) {
         this.id = id;
         this.modelo = modelo;
         this.marca = marca;
@@ -91,11 +91,11 @@ public class Automovil implements Serializable {
         this.patente = patente;
     }
 
-    public int getCantPuertas() {
+    public String getCantPuertas() {
         return cantPuertas;
     }
 
-    public void setCantPuertas(int cantPuertas) {
+    public void setCantPuertas(String cantPuertas) {
         this.cantPuertas = cantPuertas;
     }
 

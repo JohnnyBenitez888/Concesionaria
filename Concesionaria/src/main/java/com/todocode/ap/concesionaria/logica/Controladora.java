@@ -6,7 +6,7 @@ public class Controladora {
 
     ControladoraPersistencia persis = new ControladoraPersistencia();
 
-    public void crearAuto(String modelo, String marca, String motor, String color, String patente, int puertas) {
+    public void crearAuto(String modelo, String marca, String motor, String color, String patente, String puertas) {
 
         Automovil auto = new Automovil();
         auto.setModelo(modelo);
