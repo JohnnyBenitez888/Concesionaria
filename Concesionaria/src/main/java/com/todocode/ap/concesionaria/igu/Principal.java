@@ -22,6 +22,7 @@ public class Principal extends javax.swing.JFrame {
         btnSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -36,6 +37,11 @@ public class Principal extends javax.swing.JFrame {
         btnAltas.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnAltas.setForeground(new java.awt.Color(255, 255, 255));
         btnAltas.setText("Alta de Automóviles");
+        btnAltas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAltasActionPerformed(evt);
+            }
+        });
 
         btnBajas.setBackground(new java.awt.Color(51, 51, 51));
         btnBajas.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -104,8 +110,17 @@ public class Principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        // TODO add your handling code here:
+        //SALIR
+        System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void btnAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAltasActionPerformed
+        // ALTA
+        Alta alta = new Alta();
+        alta.setVisible(true);
+        alta.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnAltasActionPerformed
 
    
 
