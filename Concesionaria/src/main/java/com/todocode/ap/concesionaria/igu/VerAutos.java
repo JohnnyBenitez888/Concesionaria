@@ -3,21 +3,19 @@ package com.todocode.ap.concesionaria.igu;
 import com.todocode.ap.concesionaria.logica.Automovil;
 import com.todocode.ap.concesionaria.logica.Controladora;
 import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
- 
 public class VerAutos extends javax.swing.JFrame {
 
-    
     Controladora control = null;
-    
+
     public VerAutos() {
         initComponents();
         this.control = new Controladora();
         cargarTabla();
     }
 
-     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -167,7 +165,7 @@ public class VerAutos extends javax.swing.JFrame {
 
     //Metodo cargar Tabla-------------------------------------------------------
     public void cargarTabla() {
-        
+
         //PARA QUE EL USUARIO NO MUEVA DE LUGAR LAS COLUMNAS
         tabla.getTableHeader().setReorderingAllowed(false);
 
@@ -192,7 +190,7 @@ public class VerAutos extends javax.swing.JFrame {
         if (autos != null) {
             for (Automovil auto : autos) {
                 Object objeto[] = {auto.getId(), auto.getModelo(), auto.getMarca(), auto.getMotor(), auto.getColor(),
-                auto.getPatente(), auto.getCantPuertas()};
+                    auto.getPatente(), auto.getCantPuertas()};
                 modelo.addRow(objeto);
             }
         }
@@ -200,32 +198,44 @@ public class VerAutos extends javax.swing.JFrame {
         //agregar el modelo a la tabla
         tabla.setModel(modelo);
     }
-    
+
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
 
-//        //Controlo que la tabla no esté vacía.
-//        if (tabla.getRowCount() > 0) {
-//
-//            //Controlo que se haya seleccionado un registro.
-//            if (tabla.getSelectedRow() != -1) {
-//
-//                //Obtengo ID de la mascota a eliminar.
-//                int idAuto = Integer.parseInt(String.valueOf(tabla.getValueAt(tabla.getSelectedRow(), 0)));
-//
-//                //Llamo al método borrar.
-//                control.eliminarDato(idAuto);
-//
-//                //Aviso al usuario que borró correctamente.
-//                mostrarMensaje("Dato eliminado correctamente.", "info", "Eliminación de Datos");
-//
-//                //Volvemos a cargar la tabla.
-//                cargarTabla();
-//            } else {
-//                mostrarMensaje("Seleccione para eliminar", "error", "Eliminación de Datos");
-//            }
-//        } else {
-//            mostrarMensaje("No hay datos para eliminar", "error", "Eliminación de Datos");
-//        }
+        //Controlo que la tabla no esté vacía.
+        if (tabla.getRowCount() > 0) {
+
+            //Controlo que se haya seleccionado un registro.
+            if (tabla.getSelectedRow() != -1) {
+
+                //Obtengo ID de la mascota a eliminar.
+                int idAuto = Integer.parseInt(String.valueOf(tabla.getValueAt(tabla.getSelectedRow(), 0)));
+
+                int pregunta = JOptionPane.showConfirmDialog(//Preguntamos si está seguro de realizar la acción
+                        this, "¿Estas seguro de querer eliminar este auto?",
+                        "Mensaje..!!",
+                        JOptionPane.YES_NO_OPTION);
+                if (pregunta == JOptionPane.YES_OPTION) {
+
+                    //Llamo al método borrar.
+                    control.eliminarAuto(idAuto);
+
+                    //Volvemos a cargar la tabla.
+                    cargarTabla();
+
+                    //Aviso al usuario que borró correctamente.
+                    JOptionPane.showMessageDialog(null, "Auto eliminado correctamente");
+
+                }
+                if (pregunta == JOptionPane.NO_OPTION) {
+                    JOptionPane.showMessageDialog(null, "Acción cancelada!!");
+                    cargarTabla();
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "Seleccione para eliminar");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "No hay datos para eliminar");
+        }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
@@ -260,7 +270,6 @@ public class VerAutos extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAtras;

@@ -5,12 +5,12 @@ package com.todocode.ap.concesionaria.igu;
  * @author Johnny
  */
 public class Principal extends javax.swing.JFrame {
-
+    
     public Principal() {
         initComponents();
         setLocationRelativeTo(null);
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -139,7 +139,6 @@ public class Principal extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnBajasActionPerformed
 
-   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAltas;

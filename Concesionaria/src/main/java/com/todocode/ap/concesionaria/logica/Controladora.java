@@ -25,4 +25,8 @@ public class Controladora {
         return persis.traerAutos();
     }
 
+    public void eliminarAuto(int idAuto) {
+        persis.eliminarAuto(idAuto);
+    }
+
 }
