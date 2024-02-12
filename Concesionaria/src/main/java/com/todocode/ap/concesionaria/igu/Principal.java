@@ -36,6 +36,7 @@ public class Principal extends javax.swing.JFrame {
         btnAltas.setBackground(new java.awt.Color(51, 51, 51));
         btnAltas.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnAltas.setForeground(new java.awt.Color(255, 255, 255));
+        btnAltas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/frenteAuto (40x40).png"))); // NOI18N
         btnAltas.setText("Alta de Automóviles");
         btnAltas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -46,11 +47,13 @@ public class Principal extends javax.swing.JFrame {
         btnBajas.setBackground(new java.awt.Color(51, 51, 51));
         btnBajas.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnBajas.setForeground(new java.awt.Color(255, 255, 255));
+        btnBajas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/consulta(40x40).png"))); // NOI18N
         btnBajas.setText("Consulta, Edición y Baja");
 
         btnSalir.setBackground(new java.awt.Color(51, 51, 51));
         btnSalir.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnSalir.setForeground(new java.awt.Color(255, 255, 255));
+        btnSalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/salir(40x40).png"))); // NOI18N
         btnSalir.setText("Salir");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

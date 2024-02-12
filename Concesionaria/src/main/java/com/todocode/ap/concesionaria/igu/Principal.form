@@ -119,6 +119,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/image/frenteAuto (40x40).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Alta de Autom&#xf3;viles"/>
           </Properties>
           <Events>
@@ -136,6 +139,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/image/consulta(40x40).png"/>
+            </Property>
             <Property name="text" type="java.lang.String" value="Consulta, Edici&#xf3;n y Baja"/>
           </Properties>
         </Component>
@@ -149,6 +155,9 @@
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/image/salir(40x40).png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Salir"/>
           </Properties>

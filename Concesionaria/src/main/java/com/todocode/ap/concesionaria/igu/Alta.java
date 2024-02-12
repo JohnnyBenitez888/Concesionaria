@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.todocode.ap.concesionaria.igu;
 
 /**
@@ -46,6 +42,7 @@ public class Alta extends javax.swing.JFrame {
         btnAtras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -85,21 +82,27 @@ public class Alta extends javax.swing.JFrame {
         jLabel7.setText("Cant. Puertas:");
 
         txtMotor.setBackground(new java.awt.Color(51, 51, 51));
+        txtMotor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtMotor.setForeground(new java.awt.Color(255, 255, 255));
 
         txtMarca.setBackground(new java.awt.Color(51, 51, 51));
+        txtMarca.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtMarca.setForeground(new java.awt.Color(255, 255, 255));
 
         txtModelo.setBackground(new java.awt.Color(51, 51, 51));
+        txtModelo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtModelo.setForeground(new java.awt.Color(255, 255, 255));
 
         txtColor.setBackground(new java.awt.Color(51, 51, 51));
+        txtColor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtColor.setForeground(new java.awt.Color(255, 255, 255));
 
         txtPatente.setBackground(new java.awt.Color(51, 51, 51));
+        txtPatente.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         txtPatente.setForeground(new java.awt.Color(255, 255, 255));
 
         box.setBackground(new java.awt.Color(51, 51, 51));
+        box.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         box.setForeground(new java.awt.Color(255, 255, 255));
         box.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "-", "2", "3", "4" }));
 
@@ -129,6 +132,11 @@ public class Alta extends javax.swing.JFrame {
         btnAtras.setMinimumSize(new java.awt.Dimension(86, 24));
         btnAtras.setName(""); // NOI18N
         btnAtras.setPreferredSize(new java.awt.Dimension(86, 24));
+        btnAtras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAtrasActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -224,40 +232,15 @@ public class Alta extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Alta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Alta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Alta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Alta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
+        // ATRAS
+        Principal pri = new Principal();
+        pri.setVisible(true);
+        pri.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_btnAtrasActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Alta().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> box;
