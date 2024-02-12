@@ -9,7 +9,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Automovil implements Serializable {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int id;
@@ -103,7 +103,5 @@ public class Automovil implements Serializable {
     public String toString() {
         return "Automovil{" + "Id=" + id + ", Modelo=" + modelo + ", Marca=" + marca + ", Motor=" + motor + ", Color=" + color + ", Patente=" + patente + ", Cantidad Puertas=" + cantPuertas + '}';
     }
-    
-    
-    
+
 }

@@ -121,6 +121,11 @@ public class Alta extends javax.swing.JFrame {
         btnLimpiar.setMaximumSize(new java.awt.Dimension(86, 24));
         btnLimpiar.setMinimumSize(new java.awt.Dimension(86, 24));
         btnLimpiar.setPreferredSize(new java.awt.Dimension(86, 24));
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
 
         btnAtras.setBackground(new java.awt.Color(51, 51, 51));
         btnAtras.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -246,12 +251,27 @@ public class Alta extends javax.swing.JFrame {
         String motor = txtMotor.getText();
         String color = txtColor.getText();
         String patente = txtPatente.getText();
-        String puertas = (String) box.getSelectedItem();
+        int puertas = (int) box.getSelectedItem();
 
         control.crearAuto(modelo, marca, motor, color, patente, puertas);
         JOptionPane.showMessageDialog(null, "Auto creado Correctamente.");
+        limpiar();
     }//GEN-LAST:event_btnGuardarActionPerformed
 
+    private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
+        // LIMPIAR
+        limpiar();
+    }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    public void limpiar(){
+        txtModelo.setText("");
+        txtMarca.setText("");
+        txtMotor.setText("");
+        txtColor.setText("");
+        txtPatente.setText("");
+        box.setSelectedIndex(0);
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> box;
