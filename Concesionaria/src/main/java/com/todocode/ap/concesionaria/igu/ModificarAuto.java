@@ -43,6 +43,7 @@ public class ModificarAuto extends javax.swing.JFrame {
         btnAtras = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -252,6 +253,9 @@ public class ModificarAuto extends javax.swing.JFrame {
         String puertas = (String) box.getSelectedItem();
 
         //editar Auto
+        if (puertas.equals("-")){
+            puertas = "1";
+        }
         control.editarAuto(auto, modelo, marca, motor, color, patente, puertas);
         limpiar();
 

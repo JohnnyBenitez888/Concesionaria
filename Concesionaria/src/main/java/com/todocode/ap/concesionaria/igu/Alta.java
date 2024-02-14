@@ -253,7 +253,9 @@ public class Alta extends javax.swing.JFrame {
         String color = txtColor.getText();
         String patente = txtPatente.getText();
         String puertas = (String) box.getSelectedItem();
-
+        if (puertas.equals("-")){
+            puertas = "1";
+        }
         control.crearAuto(modelo, marca, motor, color, patente, puertas);
         JOptionPane.showMessageDialog(null, "Auto creado Correctamente.");
         limpiar();
