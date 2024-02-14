@@ -243,8 +243,8 @@ public class ModificarAuto extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //BOTON MODIFICAR-----------------------------------------------------------
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        // MODIFICAR
         String modelo = txtModelo.getText();
         String marca = txtMarca.getText();
         String motor = txtMotor.getText();
@@ -253,7 +253,7 @@ public class ModificarAuto extends javax.swing.JFrame {
         String puertas = (String) box.getSelectedItem();
 
         //editar Auto
-        if (puertas.equals("-")){
+        if (puertas.equals("-")) {
             puertas = "1";
         }
         control.editarAuto(auto, modelo, marca, motor, color, patente, puertas);
@@ -266,13 +266,13 @@ public class ModificarAuto extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnGuardarActionPerformed
 
+    //BOTON LIMPIAR-------------------------------------------------------------
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        // LIMPIAR
         limpiar();
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
+    //BOTON ATRAS---------------------------------------------------------------
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-        // ATRAS
         VerAutos pri = new VerAutos();
         pri.setVisible(true);
         pri.setLocationRelativeTo(null);

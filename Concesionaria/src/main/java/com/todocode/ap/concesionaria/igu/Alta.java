@@ -237,23 +237,23 @@ public class Alta extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    // BOTON ATRAS--------------------------------------------------------------
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
-        // ATRAS
         Principal pri = new Principal();
         pri.setVisible(true);
         pri.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
+    // BOTON GUARDAR------------------------------------------------------------
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        // GUARDAR
         String modelo = txtModelo.getText();
         String marca = txtMarca.getText();
         String motor = txtMotor.getText();
         String color = txtColor.getText();
         String patente = txtPatente.getText();
         String puertas = (String) box.getSelectedItem();
-        if (puertas.equals("-")){
+        if (puertas.equals("-")) {
             puertas = "1";
         }
         control.crearAuto(modelo, marca, motor, color, patente, puertas);
@@ -261,12 +261,13 @@ public class Alta extends javax.swing.JFrame {
         limpiar();
     }//GEN-LAST:event_btnGuardarActionPerformed
 
+    // BOTON LIMPIAR------------------------------------------------------------
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        // LIMPIAR
         limpiar();
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
-    public void limpiar(){
+    //LIMPIAR-------------------------------------------------------------------
+    public void limpiar() {
         txtModelo.setText("");
         txtMarca.setText("");
         txtMotor.setText("");
@@ -274,7 +275,7 @@ public class Alta extends javax.swing.JFrame {
         txtPatente.setText("");
         box.setSelectedIndex(0);
     }
-    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> box;

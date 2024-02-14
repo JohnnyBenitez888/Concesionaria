@@ -5,12 +5,12 @@ package com.todocode.ap.concesionaria.igu;
  * @author Johnny
  */
 public class Principal extends javax.swing.JFrame {
-    
+
     public Principal() {
         initComponents();
         setLocationRelativeTo(null);
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -118,21 +118,21 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    //BOTON SALIR---------------------------------------------------------------
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-        //SALIR
         System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
 
+    //BOTON ALTA----------------------------------------------------------------
     private void btnAltasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAltasActionPerformed
-        // ALTA
         Alta alta = new Alta();
         alta.setVisible(true);
         alta.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_btnAltasActionPerformed
 
+    //BOTON CONSULTA Y EDICION--------------------------------------------------
     private void btnBajasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBajasActionPerformed
-        // CONSULTA Y EDICION
         VerAutos ver = new VerAutos();
         ver.setVisible(true);
         ver.setLocationRelativeTo(null);

@@ -185,14 +185,14 @@ public class VerAutos extends javax.swing.JFrame {
         //Setear nombres de cada columna.
         modelo.setColumnIdentifiers(titulos);
 
-        //traer datos desda la Base Datos
+        //traer los autos desda la Base Datos
         List<Automovil> autos = control.traerAutos();
 
-        //cargar las mascotas y los duenios en la tabla
+        //cargar los autos en la tabla
         if (autos != null) {
             for (Automovil auto : autos) {
-                Object objeto[] = {auto.getId(), auto.getModelo(), auto.getMarca(), auto.getMotor(), auto.getColor(),
-                    auto.getPatente(), auto.getCantPuertas()};
+                Object objeto[] = {auto.getId(), auto.getModelo(), auto.getMarca(), auto.getMotor(), 
+                    auto.getColor(), auto.getPatente(), auto.getCantPuertas()};
                 modelo.addRow(objeto);
             }
         }
@@ -207,10 +207,10 @@ public class VerAutos extends javax.swing.JFrame {
         //Controlo que la tabla no esté vacía.
         if (tabla.getRowCount() > 0) {
 
-            //Controlo que se haya seleccionado un registro.
+            //Controlo que se haya seleccionado un auto.
             if (tabla.getSelectedRow() != -1) {
 
-                //Obtengo ID de la mascota a eliminar.
+                //Obtengo ID del auto a eliminar.
                 int idAuto = Integer.parseInt(String.valueOf(tabla.getValueAt(tabla.getSelectedRow(), 0)));
 
                 int pregunta = JOptionPane.showConfirmDialog(//Preguntamos si está seguro de realizar la acción
@@ -237,7 +237,7 @@ public class VerAutos extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Seleccione para eliminar");
             }
         } else {
-            JOptionPane.showMessageDialog(null, "No hay datos para eliminar");
+            JOptionPane.showMessageDialog(null, "No hay Autos para eliminar");
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
@@ -247,7 +247,7 @@ public class VerAutos extends javax.swing.JFrame {
         //Controlo que la tabla no esté vacía.
         if (tabla.getRowCount() > 0) {
 
-            //Controlo que se haya seleccionado un registro.
+            //Controlo que se haya seleccionado un auto.
             if (tabla.getSelectedRow() != -1) {
 
                 //Obtengo ID del auto a editar.
@@ -260,10 +260,10 @@ public class VerAutos extends javax.swing.JFrame {
                 this.dispose();
 
             } else {
-               JOptionPane.showMessageDialog(null, "Seleccione para modificar");
+                JOptionPane.showMessageDialog(null, "Seleccione para modificar");
             }
         } else {
-           JOptionPane.showMessageDialog(null, "No hay datos para modificar");
+            JOptionPane.showMessageDialog(null, "No hay Autos para modificar");
         }
     }//GEN-LAST:event_btnEditarActionPerformed
 
