@@ -22,6 +22,7 @@ public class AutomovilJpaController implements Serializable {
         this.emf = emf;
     }
     
+    //CONSTRUCTOR CREADO
     public AutomovilJpaController(){
         this.emf = Persistence.createEntityManagerFactory("ConcePU");
     }

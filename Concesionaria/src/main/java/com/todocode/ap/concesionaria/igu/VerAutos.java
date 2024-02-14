@@ -163,7 +163,7 @@ public class VerAutos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    //Metodo cargar Tabla-------------------------------------------------------
+    //CARGAR TABLA--------------------------------------------------------------
     public void cargarTabla() {
 
         //PARA QUE EL USUARIO NO MUEVA DE LUGAR LAS COLUMNAS
@@ -199,6 +199,7 @@ public class VerAutos extends javax.swing.JFrame {
         tabla.setModel(modelo);
     }
 
+    //ELIMINAR AUTO-------------------------------------------------------------
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
 
         //Controlo que la tabla no esté vacía.
@@ -238,32 +239,33 @@ public class VerAutos extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
+    //EDITAR AUTO---------------------------------------------------------------
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
 
-//        //Controlo que la tabla no esté vacía.
-//        if (tabla.getRowCount() > 0) {
-//
-//            //Controlo que se haya seleccionado un registro.
-//            if (tabla.getSelectedRow() != -1) {
-//
-//                //Obtengo ID de la mascota a editar.
-//                int idAuto = Integer.parseInt(String.valueOf(tabla.getValueAt(tabla.getSelectedRow(), 0)));
-//
-//                //Instancio el jFrame de modificar
-//                ModificarDatos modi = new ModificarDatos(idAuto);
-//                modi.setVisible(true);
-//                modi.setLocationRelativeTo(null);
-//                this.dispose();
-//
-//            } else {
-//                mostrarMensaje("Seleccione para Modificar", "error", "Modificación de Datos");
-//            }
-//        } else {
-//            mostrarMensaje("No hay datos para modificar", "error", "Modificación de Datos");
-//        }
+        //Controlo que la tabla no esté vacía.
+        if (tabla.getRowCount() > 0) {
+
+            //Controlo que se haya seleccionado un registro.
+            if (tabla.getSelectedRow() != -1) {
+
+                //Obtengo ID del auto a editar.
+                int idAuto = Integer.parseInt(String.valueOf(tabla.getValueAt(tabla.getSelectedRow(), 0)));
+
+                //Instancio el jFrame de modificar
+                ModificarAuto modi = new ModificarAuto(idAuto);
+                modi.setVisible(true);
+                modi.setLocationRelativeTo(null);
+                this.dispose();
+
+            } else {
+               JOptionPane.showMessageDialog(null, "Seleccione para modificar");
+            }
+        } else {
+           JOptionPane.showMessageDialog(null, "No hay datos para modificar");
+        }
     }//GEN-LAST:event_btnEditarActionPerformed
 
-    //BOTON ATRAS-----------------------------------------------------------------------------------------------------------------
+    //BOTON ATRAS---------------------------------------------------------------
     private void btnAtrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAtrasActionPerformed
         Principal pri = new Principal();
         pri.setVisible(true);

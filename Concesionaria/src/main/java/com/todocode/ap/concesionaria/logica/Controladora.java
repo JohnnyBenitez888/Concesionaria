@@ -29,4 +29,23 @@ public class Controladora {
         persis.eliminarAuto(idAuto);
     }
 
+    public Automovil traerAuto(int idAuto) {
+        return persis.traerAuto(idAuto);
+    }
+
+    public void editarAuto(Automovil auto, String modelo, String marca, String motor, String color,
+            String patente, String puertas) {
+        
+        auto.setModelo(modelo);
+        auto.setMarca(marca);
+        auto.setMotor(motor);
+        auto.setColor(color);
+        auto.setPatente(patente);
+        auto.setCantPuertas(puertas);
+        
+        persis.editarAuto(auto);
+    }
+
+    
+
 }
