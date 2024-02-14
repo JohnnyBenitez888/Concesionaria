@@ -16,6 +16,7 @@ public class ModificarAuto extends javax.swing.JFrame {
         this.control = new Controladora();
         initComponents();
         cargar();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")

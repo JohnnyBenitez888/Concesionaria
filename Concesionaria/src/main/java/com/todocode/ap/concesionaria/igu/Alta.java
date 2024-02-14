@@ -10,6 +10,7 @@ public class Alta extends javax.swing.JFrame {
     public Alta() {
         initComponents();
         this.control = new Controladora();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")

@@ -14,6 +14,7 @@ public class VerAutos extends javax.swing.JFrame {
         initComponents();
         this.control = new Controladora();
         cargarTabla();
+        setLocationRelativeTo(null);
     }
 
     @SuppressWarnings("unchecked")
