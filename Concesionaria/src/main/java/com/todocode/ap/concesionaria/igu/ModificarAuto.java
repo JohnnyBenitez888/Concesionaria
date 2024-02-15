@@ -36,7 +36,7 @@ public class ModificarAuto extends javax.swing.JFrame {
         txtPatente = new javax.swing.JTextField();
         box = new javax.swing.JComboBox<>();
         labelIcono = new javax.swing.JLabel();
-        btnGuardar = new javax.swing.JButton();
+        btnModificar = new javax.swing.JButton();
         btnLimpiar = new javax.swing.JButton();
         btnAtras = new javax.swing.JButton();
 
@@ -107,14 +107,14 @@ public class ModificarAuto extends javax.swing.JFrame {
 
         labelIcono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/editarAuto.png"))); // NOI18N
 
-        btnGuardar.setBackground(new java.awt.Color(51, 51, 51));
-        btnGuardar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
-        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/consulta(40x40).png"))); // NOI18N
-        btnGuardar.setText("Modificar");
-        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+        btnModificar.setBackground(new java.awt.Color(51, 51, 51));
+        btnModificar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnModificar.setForeground(new java.awt.Color(255, 255, 255));
+        btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/consulta(40x40).png"))); // NOI18N
+        btnModificar.setText("Modificar");
+        btnModificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarActionPerformed(evt);
+                btnModificarActionPerformed(evt);
             }
         });
 
@@ -176,7 +176,7 @@ public class ModificarAuto extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(box, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnGuardar)
+                                .addComponent(btnModificar)
                                 .addGap(18, 18, 18)
                                 .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
@@ -221,7 +221,7 @@ public class ModificarAuto extends javax.swing.JFrame {
                     .addComponent(box, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnModificar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnAtras, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(17, 17, 17))
@@ -242,7 +242,7 @@ public class ModificarAuto extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     //BOTON MODIFICAR-----------------------------------------------------------
-    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+    private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         String modelo = txtModelo.getText();
         String marca = txtMarca.getText();
         String motor = txtMotor.getText();
@@ -250,10 +250,12 @@ public class ModificarAuto extends javax.swing.JFrame {
         String patente = txtPatente.getText();
         String puertas = (String) box.getSelectedItem();
 
-        //editar Auto
+        //por si se olvida de seleccionar las puertas y no nos salte una exception
         if (puertas.equals("-")) {
             puertas = "1";
         }
+
+        //Editamos el auto
         control.editarAuto(auto, modelo, marca, motor, color, patente, puertas);
         limpiar();
 
@@ -262,7 +264,7 @@ public class ModificarAuto extends javax.swing.JFrame {
         VerAutos ver = new VerAutos();
         ver.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_btnGuardarActionPerformed
+    }//GEN-LAST:event_btnModificarActionPerformed
 
     //BOTON LIMPIAR-------------------------------------------------------------
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
@@ -299,8 +301,8 @@ public class ModificarAuto extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> box;
     private javax.swing.JButton btnAtras;
-    private javax.swing.JButton btnGuardar;
     private javax.swing.JButton btnLimpiar;
+    private javax.swing.JButton btnModificar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
