@@ -6,16 +6,14 @@ import javax.swing.JOptionPane;
 
 public class ModificarAuto extends javax.swing.JFrame {
 
-    private int idAuto;
     Automovil auto = null;
     Controladora control = null;
 
     public ModificarAuto(int idAuto) {
-        this.idAuto = idAuto;
         this.auto = new Automovil();
         this.control = new Controladora();
         initComponents();
-        cargar();
+        cargar(idAuto);
         setLocationRelativeTo(null);
     }
 
@@ -279,7 +277,7 @@ public class ModificarAuto extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btnAtrasActionPerformed
 
-    public void cargar() {
+    public void cargar(int idAuto) {
         auto = control.traerAuto(idAuto);
         txtModelo.setText(auto.getModelo());
         txtMarca.setText(auto.getMarca());
